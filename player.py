@@ -10,10 +10,10 @@ class Player():
 
     def __init__(self):
         self.settings = Settings()
-        self.x = 10
-        self.y = self.settings.SCREENHEIGHT / 2
         self.width = 10
         self.height = 100
+        self.x = 10
+        self.y = self.settings.SCREENHEIGHT / 2
         self.middle = self.y + self.height / 2
         self.y_vel = 30
         self.score = 0

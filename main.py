@@ -13,6 +13,9 @@ def main():
         game.events()
         game.update()
         game.draw()
+    
+    # After game loop exit
+    game.exit()
 
 # Check to see if main was imported or ran directly
 if __name__ == '__main__':

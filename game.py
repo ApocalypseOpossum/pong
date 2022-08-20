@@ -6,6 +6,8 @@ import pygame
 
 from settings import *
 from player import *
+from ball import *
+from ai import *
 
 class Game():
 
@@ -23,6 +25,8 @@ class Game():
 
         # Load assets and objects
         self.player = Player()
+        self.ball = Ball()
+        self.ai = AI()
 
 
     def events(self):
@@ -35,6 +39,8 @@ class Game():
     def update(self):
         # Update Player AI and ball
         self.player.update(self.delta_time)
+        self.ball.update(self.delta_time)
+        self.ai.update(self.delta_time)
         
 
     def draw(self):
@@ -43,11 +49,16 @@ class Game():
 
         # Draw interface
 
-        # Draw Player and AI
+        # Draw Player, AI and ball
         self.player.draw(self.screen)
+        self.ball.draw(self.screen)
+        self.ai.draw(self.screen)
 
         # After all drawing is finished update screen
         pygame.display.update()
 
         # At the end of the loop handle FPS
         self.delta_time = self.clock.tick(self.settings.FPS) / 60
+    
+    def exit(self):
+        pygame.quit()
