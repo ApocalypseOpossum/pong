@@ -6,8 +6,8 @@ class Settings():
 
     def __init__(self):
         # General constants
-        self.SCREENWIDTH = 1366
-        self.SCREENHEIGHT = 768
+        self.SCREENWIDTH = 1280
+        self.SCREENHEIGHT = 720
         self.TITLE = "Pong by Apocalypse Opossum"
         self.FPS = 60
 

@@ -14,5 +14,6 @@ def main():
         game.update()
         game.draw()
 
+# Check to see if main was imported or ran directly
 if __name__ == '__main__':
     main()
